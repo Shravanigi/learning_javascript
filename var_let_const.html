@@ -1,0 +1,118 @@
+<!-- what is the difference between var let and const compulsary interview question -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var_let_const difference</title>
+ </head>
+ <body>
+    <script>
+      //reassign and redeclaration both are allowed and global scope
+        var fnm ="shravani";
+        var fnm ="shreya";
+        document.write(fnm);
+        document.write("<br>")
+            // redeclare allowed only and local scope
+        let lnm ="kudale";
+        lnm="patil";
+        document.write(lnm);
+        document.write("<br>")
+        // redeclare and reassign both not allowed
+        const pi = 3.14;
+        document.write(pi);
+        document.write("<br>")
+    </script>
+    <script>
+        function example(){
+            var x = 1;
+            let y = 2;
+            const z = 3;
+            if(true)
+            {
+                var x = 10;
+                let y = 20;
+                const z = 30;
+                document.write("<br>")
+                document.write(x + " " + y + " "+ z); //10 20 30
+                document.write("<br>")
+             }
+             document.write(x+" "+ y+ " "+ z);//10 2 3
+        }
+        example();
+    </script>
+
+    <!-- datatypes in javascript -->
+     <script>
+        var a="manasi";//string
+        var b="365";//number
+        var c="true";//boolean
+        var d=["HTML","CSS","JS","java"];//object
+        var e={fnm:"shreya",lnm:"kudale"};//objct
+        var f=null;//object
+        var g;//undefined
+        document.write(a);
+        document.write("<br>");
+        document.write(typeof(a));
+        document.write(b);
+        document.write("<br>");
+        document.write(typeof(b));
+        document.write(c);
+        document.write("<br>");
+        document.write(typeof(c));
+        document.write(d);
+        document.write("<br>");
+        document.write(typeof(d));
+        document.write(e);
+        document.write("<br>");
+        document.write(typeof(e));
+        document.write(f);
+        document.write("<br>");
+        document.write(typeof(f));
+        document.write(g);
+        document.write("<br>");
+        document.write(typeof(g));
+        document.write("<br>");
+        // operators in javascript
+        var a=17;//+,=,-,*,/,**,==
+        var b=4;
+        var c= a*b;
+        c++;
+        c--;
+        c++;
+        c++;
+        c++;
+        document.write(c);
+</script>
+<script>
+    // what is the difference between == and === compulsary interview question
+    var p="20";
+    var q=20;
+    if(p===q){
+        document.write("true");
+    }
+    else{
+        document.write("false");
+    }
+</script>
+ <script>
+    let age=15;
+    let eligible= (age>=18) ? "eligible" : "not eligible";
+    document.write(eligible);
+ </script>
+ <!-- accepting data from user -->
+  <script>
+    var unm="kalpana";
+    var pin="411017";
+    var inunm= prompt("enter unm:");
+    var inpin= prompt("enter pin:");
+    if(inunm===unm && inpin===pin)
+  {
+    document.write("login successful...");
+  }
+  else{
+    document.write("login denied...");
+  }
+  </script>
+ </body>
+ </html>
